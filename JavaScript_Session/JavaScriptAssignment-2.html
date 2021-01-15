@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Assignment 2</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="1">1</div>
+    <div id="2">2</div>
+    <div id="3">3</div>
+    <div id="4">4</div>
+    <div id="5">5</div>
+    <div id="6">6</div>
+    <div id="7">7</div>
+    <div id="8">8</div>
+    <div id="9">9</div>
+    <div id="10">10</div>
+    <div id="11">11</div>
+    <div id="12">12</div>
+    <div id="13">13</div>
+    <div id="14">14</div>
+    <div id="15">15</div>
+    <div id="16">16</div>
+    <div id="17">17</div>
+    <div id="18">18</div>
+    <div id="19">19</div>
+    <div id="20">20</div>
+    <input type="button" value="Highlight Even" onClick="redColor();"> &nbsp;&nbsp;<br>
+    <input type="button" value="Highlight Multiple of 5" onClick="greenColor();"> &nbsp;&nbsp;<br>
+    <input type="button" value="Reset All" onClick="resetAll();"> &nbsp;&nbsp;
+
+    <script>
+        var i = 0;
+        var j = 1;
+        for (j = 1; j <= 20; j++) {
+            document.getElementById(j).style.border = "1px solid black";
+            document.getElementById(j).style.width = "500px";
+            document.getElementById(j).style.height = "25px";
+        }
+
+
+        function redColor() {
+            var j = 1;
+            for (j = 1; j <= 20; j++) {
+                document.getElementById(j).style.backgroundColor = "White";
+                document.getElementById(j).style.border = "1px solid black";
+            }
+
+            var i = 2;
+            for (i = 2; i <= 20; i = i + 2) {
+                document.getElementById(i).style.backgroundColor = "Red";
+            }
+        }
+
+        function greenColor() {
+            var j = 1;
+            for (j = 1; j <= 20; j++) {
+                document.getElementById(j).style.backgroundColor = "White";
+            }
+            var i = 1;
+            for (i = 1; i <= 20; i++) {
+                if (i % 5 == 0)
+                    document.getElementById(i).style.backgroundColor = "Green";
+            }
+        }
+
+        function resetAll() {
+            var j = 1;
+            for (j = 1; j <= 20; j++) {
+                document.getElementById(j).style.backgroundColor = "White";
+                document.getElementById(j).style.border = "1px solid black";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

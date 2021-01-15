@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        .formdesign {
+            font-size: 15px;
+            margin-left: 160px;
+        }
+        
+        .formdesign input {
+            width: 50%;
+            padding: 12px 20px;
+            border: 1px solid blue;
+            margin: 14px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .formerror {
+            color: red;
+        }
+        
+        .but {
+            border-radius: 9px;
+            width: 100px;
+            height: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        #but1 {
+            margin-left: 480px;
+        }
+        
+        .block {
+            font-size: 15px;
+            margin-left: 160px;
+        }
+        
+        .head {
+            margin-left: 32%;
+            color: crimson;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="head">
+        <h1>Registration Form</h1>
+    </div>
+    <form aciton="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formdesign" id="name">
+            Username: <input type="text" name="fname" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            Email: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="phone">
+            Phone: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+        </div>
+
+        <div class="formdesign" id="pass">
+            Password: <input type="password" name="fpass" required><b><span class="formerror"></span> </span></b>
+        </div>
+
+        <div class="formdesign" id="cpass">
+            Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+        </div>
+        <div class="block" id="msg">
+            Gender: <label for="s1">Male</label>
+            <input type="radio" id="2" name="Gender" value="1" />
+            <label for="s2">Female</label>
+            <input type="radio" id="1" name="Gender" value="2" /><b><span class="formerror"></span></b>
+        </div><br>
+        <div class="block">
+            Choose your country:
+            <select id="ctry">
+              <option value="0">Select</option>
+              <option value="1">India</option>
+              <option value="2">USA</option>
+              <option value="3">UK</option>
+              <option value="4">France</option>
+             <b><span class="formerror"></span></b></select>
+        </div><br>
+        <div id="but1"><input class="but" type="submit" value="Submit"></div>
+
+
+    </form>
+</body>
+<script>
+    function clearErrors() {
+
+        errors = document.getElementsByClassName('formerror');
+        for (let item of errors) {
+            item.innerHTML = "";
+        }
+
+
+    }
+
+    function seterror(id, error) {
+        //sets error inside tag of id 
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+    }
+
+    function validateForm() {
+        var returnval = true;
+        clearErrors();
+
+        //perform validation and if validation fails, set the value of returnval to false
+        var name = document.forms['myForm']["fname"].value;
+        console.log("Name: ", name);
+        if (name.length < 5) {
+            seterror("name", "*Provide a valid username!");
+            returnval = false;
+        }
+
+        if (name.length == 0) {
+            seterror("name", "*Fill your username!");
+            returnval = false;
+        }
+
+        var email = document.forms['myForm']["femail"].value;
+        console.log("Email: ", email);
+        if (email.length > 15) {
+            seterror("email", "*Email length is too long!");
+            returnval = false;
+        }
+
+        var phone = document.forms['myForm']["fphone"].value;
+        var flag = 0;
+        if (isNaN(phone) || phone.indexOf(" ") != -1) {
+            seterror("phone", "*Phone number should consist digits only!");
+            flag = 1;
+            returnval = false;
+        }
+        console.log("Phone: ", phone);
+        if (phone.length != 10 && flag == 0) {
+            seterror("phone", "*Phone number should be of 10 digits!");
+            returnval = false;
+        }
+
+        var password = document.forms['myForm']["fpass"].value;
+        console.log("Password: ", password);
+        if (password.length < 6) {
+            seterror("pass", "*Password should be atleast 6 characters long!");
+            returnval = false;
+        }
+
+        var cpassword = document.forms['myForm']["fcpass"].value;
+        console.log("Confrm Password: ", cpassword);
+        if (cpassword != password) {
+            seterror("cpass", "*Password and Confirm password should match!");
+            returnval = false;
+        }
+
+        var radios = document.getElementsByName("Gender");
+        if (radios[0].checked == true)
+            console.log("Gender: Male");
+        if (radios[1].checked == true)
+            console.log("Gender: Female");
+        if (radios[0].checked == false && radios[1].checked == false) {
+            console.log("Gender: Not Selected");
+            seterror("msg", " *You must choose your gender!");
+            returnval = false;
+        }
+
+        return returnval;
+    }
+</script>
+
+</html>
