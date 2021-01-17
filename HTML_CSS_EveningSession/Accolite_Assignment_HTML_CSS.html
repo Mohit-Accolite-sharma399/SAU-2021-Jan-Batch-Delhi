@@ -1,0 +1,393 @@
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <title>My Magazine</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            font-family: 'Droid Serif', serif;
+            font-size: 14px;
+            color: #2f2f2f;
+            background-color: #f9f7f1;
+        }
+        
+        header {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 80px;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 72px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .head {
+            text-align: center;
+            position: relative;
+        }
+        
+        .headerobjectswrapper {}
+        
+        .subhead {
+            text-transform: uppercase;
+            border-bottom: 2px solid #2f2f2f;
+            border-top: 2px solid #2f2f2f;
+            padding: 12px 0 12px 0;
+        }
+        
+        .weatherforcastbox {
+            position: relative;
+            width: 12%;
+            left: 10px;
+            border: 3px double #2f2f2f;
+            padding: 10px 15px 10px 15px;
+            line-height: 20px;
+            display: inline-block;
+            margin: 0 50px 20px -360px;
+        }
+        
+        .content {
+            font-size: 0;
+            line-height: 0;
+            word-spacing: -.31em;
+            display: inline-block;
+            margin: 30px 2% 0 2%;
+        }
+        
+        .collumns {}
+        
+        .collumn {
+            font-size: 14px;
+            line-height: 20px;
+            width: 17.5%;
+            display: inline-block;
+            padding: 0 1% 0 1%;
+            vertical-align: top;
+            margin-bottom: 50px;
+            transition: all .7s;
+        }
+        
+        .collumn+.collumn {
+            border-left: 1px solid #2f2f2f;
+        }
+        
+        .collumn .headline {
+            text-align: center;
+            line-height: normal;
+            font-family: 'Playfair Display', serif;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .collumn .headline.hl3 {
+            font-weight: 400;
+            font-style: italic;
+            font-size: 36px;
+            box-sizing: border-box;
+            padding: 10px 0 10px 0;
+        }
+        
+        .collumn .citation {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            line-height: 44px;
+            text-align: center;
+            font-weight: 400;
+            display: block;
+            margin: 40px 0 40px 0;
+            font-feature-settings: "liga", "dlig";
+        }
+        
+        .collumn .citation:before {
+            border-top: 1px solid #2f2f2f;
+            content: '';
+            width: 100px;
+            height: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .collumn .citation:after {
+            border-bottom: 1px solid #2f2f2f;
+            content: '';
+            width: 100px;
+            height: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .collumn .figure {
+            margin: 0 0 20px;
+        }
+        
+        .collumn .figcaption {
+            font-style: italic;
+            font-size: 12px;
+        }
+        
+        .media {
+            -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+            filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+            mix-blend-mode: multiply;
+            width: 100%;
+        }
+        /*________________________________________________________________________________________________________________________________*/
+        /*MEDIAQUERIES*/
+        
+        @media only all and (max-width: 1300px) {
+            .weatherforcastbox {
+                display: none;
+            }
+        }
+        
+        @media only all and (max-width: 1200px) {
+            .collumn {
+                width: 31%;
+            }
+        }
+        
+        @media only all and (max-width: 900px) {
+            .collumn {
+                width: 47%;
+            }
+        }
+        
+        @media only all and (max-width: 600px) {
+            .collumn {
+                width: 100%;
+            }
+            .collumn+.collumn {
+                border-left: none;
+                border-bottom: 1px solid #2f2f2f;
+            }
+            header {
+                max-width: 320px;
+                font-size: 60px;
+                line-height: 54px;
+                overflow: hidden;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="head">
+        <div class="headerobjectswrapper">
+            <div class="weatherforcastbox"><span style="font-style: italic;">This web page is designed & created by:</span><br><span>Mohit Sharma </span></div>
+            <header>Sports World</header>
+        </div>
+
+        <div class="subhead">A brief history of different sports</div>
+    </div>
+    <div class="content">
+        <div class="collumns">
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Cricket</span>
+                </div>
+                There is a consensus of expert opinion that cricket may have been invented during Saxon or Norman times by children living in the Weald, an area of dense woodlands and clearings in south-east England. The first reference to cricket being played as an
+                adult sport was in 1611, and in the same year, a dictionary defined cricket as a boys' game. There is also the thought that cricket may have derived from bowls, by the intervention of a batsman trying to stop the ball from reaching its
+                target by hitting it away.
+                <figure class="figure">
+                    <img class="media" src="GettyImages-486317210.jpg" alt="">
+                    <figcaption class="figcaption">Village cricket</figcaption>
+                </figure>
+
+                <p>Village cricket had developed by the middle of the 17th century and the first English “county teams” were formed in the second half of the century, as “local experts” from village cricket were employed as the earliest professionals. The
+                    first known game in which the teams use county names is in 1709.</p>
+                <img src="GettyImages-510357678.jpg" class="media">
+                <p>In the first half of the 18th Century cricket established itself as a leading sport in London and the south-eastern counties of England. Its spread was limited by the constraints of travel, but it was slowly gaining popularity in other
+                    parts of England and Women’s Cricket dates back to the 1745, when the first known match was played in Surrey.</p>
+                <figure class="figure">
+                    <img class="media" src="Stadiums-In-England-Cover.jpg" alt="">
+                    <figcaption class="figcaption">Cricket Stadium</figcaption>
+                </figure>
+                <p>In 1744, the first Laws of Cricket were written and subsequently amended in 1774, when innovations such as lbw, a 3rd stump, - the middle stump and a maximum bat width were added. The codes were drawn up by the “Star and Garter Club” whose
+                    members ultimately founded the famous Marylebone Cricket Club at Lord's in 1787. MCC immediately became the custodian of the Laws and has made revisions ever since then to the current day.</p>
+                <p>Since then matches between England and Australia, called The Ashes, have been the highlight of cricket competition. Other participants in Test matches include South Africa, the West Indies, New Zealand, India, and Pakistan. The ruling
+                    body for the Test matches is the International Cricket Conference, founded in 1909 as the Imperial Cricket Conference.</p>
+                <figure class="figure">
+                    <img src="indian_cricket_team.jpg" class="media" alt="">
+                    <figcaption class="figcaption">Indian Cricket Team</figcaption>
+                </figure>
+                <p>The India men's national cricket team, also known as Team India and Men in Blue, is governed by the Board of Control for Cricket in India (BCCI), and is a Full Member of the International Cricket Council with Test, One-Day International
+                    and Twenty20 International status</p>
+                <p>The domestic competitions include the Ranji Trophy, the Duleep Trophy, the Vijay Hazare Trophy, the Deodhar Trophy, the Irani Trophy and the NKP Salve Challenger Trophy. In addition, the BCCI conducts the Indian Premier League, a Twenty20
+                    competition, which is also one of the biggest sports leagues in the world and the biggest cricket league in the world. The Indian cricket team is also accredited with the honour of winning all the ICC tournaments under MS Dhoni's captaincy,
+                    which is a world record. While cricket is by far the most popular sport in the country, it is not the country's national sport. Hockey is India's National sport.</p>
+                <p>Cricket has been played in the United States since the 18th century; the first formal clubs were formed in the 1820s. During the 1850s and 1860s, the popularity of cricket rivaled that of baseball. Later in the 19th century, American teams
+                    sometimes competed against British and Canadian teams. A few players from this time in the sport’s history are regarded very highly.</p>
+                <br>
+                <iframe class="media" src="https://www.youtube.com/embed/IXvBVMjSNy4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Hockey</span>
+                </div>
+                <p>The roots of hockey are buried deep in antiquity. Historical records show that a crude form of the game was played in Egypt 4,000 years ago and in Ethiopia around 1,000BC, whilst an ancient form of the game was also played in Iran in around
+                    2,000BC. However, Britain is credited with developing the modern form of field hockey. It was here that the first field hockey club was established in Blackheath, Ireland in 1861. The first association was formed in Britain in 1876.
+                    A decade later, 9 international member clubs formed the first permanent association.</p>
+                <figure class="figure">
+                    <img src="unnamed-3.jpg" class="media" alt="">
+                    <figcaption class="figcaption">Village hockey</figcaption>
+                </figure>
+
+                <p>The introduction of Hockey in the 1908 London Olympics with France, Germany and the four United Kingdom nations participating. Since then, it had an on-and-off journey until 1924, when it was held in 1920 Antwerp Olympics squeezed between
+                    omissions in Stockholm (1912) and Paris (1924). Since then, it has been a regular feature in the Olympics. Women’s hockey was first featured in Moscow in 1980.</p>
+                <figure class="figure">
+                    <img src="dhyan_chand_1200-696x385.jpg" class="media" alt="">
+                    <figcaption class="figcaption">Dhyan Chand’s meeting with Hitler</figcaption>
+                </figure>
+                <p>Dhyan Chand was understandably nervous of the meeting having heard stories of Hitler shooting people on the spot in his private chamber. However, to his relief, Hitler congratulated Chand for his extraordinary performances in the final.Moreover,
+                    after getting to know that he was a part of the Indian army, the Fuhrer reportedly offered Dhyan Chand a high post in the Nazi army. In reply, the 31-year-old is said to have politely refused the offer citing relocation of the family
+                    as a constraint. Quite thankfully, Hitler was understanding and bid Chand a warm adieu. That was the last meeting between the two. Three years later, Germany would start the Second World War, culminating with Adolf Hitler’s suicide
+                    in 1945. However, the six years of war also meant that there wouldn’t be any Olympics for eight years. This also meant a sad end of careers for some of hockey’s most legendary players like Dhyan Chand, Roop Singh, and Carlyle Tapsell.
+                    Then I saw some cabmen and others had walked boldly into the sand pits, and heard the clatter of hoofs and the gride of wheels. I saw a lad trundling off the barrow of apples. And then, within thirty yards of the pit, advancing from
+                    the direction of Horsell, I noted a little black knot of men, the foremost of whom was waving a white flag.</p>
+
+                <figure class="figure">
+                    <img src="indian_hockey_team.jpg" class="media" alt="">
+                    <figcaption class="figcaption">Indian Hockey Team</figcaption>
+                </figure>
+                <p>However, the new generation of youngsters is taking India’s game back to its original greatness with some breathtaking performances. After a long drought, the Indian men’s team won its first-ever medal at a major competition- a silver
+                    medal – at the Champions Trophy in 2016. Furthermore, they also reached the knockout stage of the Olympics for the very 1st time in over 36 years. The team also entered the quarter-finals of the 2018 World Cup, only to lose in a closely-fought
+                    game against the Netherlands that ended 2-1. As of 2020, the team is ranked 4th in the FIH World Ranking.</p>
+                <figure class="figure">
+                    <img src="hockey_ground.jpg" class="media" alt="">
+                    <figcaption class="figcaption">Hockey Court</figcaption>
+                </figure>
+                <p>Air hockey is played indoors with a puck on an air-cushion table.Beach hockey, a variation of street hockey, is a common sight on Southern California beaches.Indoor hockey is an indoor variation of field hockey.</p>
+                <p> Both the Men’s as well as Women’s teams have qualified for the 2020 Tokyo Olympics which unfortunately got postponed due to the Coronavirus pandemic. From 2018, the Government of Odisha has started sponsoring the Indian national field
+                    hockey team, both women and men’s team. The state government has also built a world-class hockey facility in the face of Kalinga Stadium for further promotion of the sport.</p>
+                <iframe class="media" src="https://www.youtube.com/embed/6aMW5mOKxB8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Football</span>
+                </div>Football, also called association football or soccer, game in which two teams of 11 players, using any part of their bodies except their hands and arms, try to maneuver the ball into the opposing team’s goal. Only the goalkeeper
+                is permitted to handle the ball and may do so only within the penalty area surrounding the goal. The team that scores more goals wins.</p>
+                <figure class="figure">
+                    <img class="media" src="football_image.jpg" alt="">
+                    <figcaption class="figcaption">Football Match</figcaption>
+                </figure>
+                <p>Modern football originated in Britain in the 19th century. Since before medieval times, “folk football” games had been played in towns and villages according to local customs and with a minimum of rules. Industrialization and urbanization,
+                    which reduced the amount of leisure time and space available to the working class, combined with a history of legal prohibitions against particularly violent and destructive forms of folk football to undermine the game’s status from
+                    the early 19th century onward. However, football was taken up as a winter game between residence houses at public (independent) schools such as Winchester, Charterhouse, and Eton. Each school had its own rules; some allowed limited
+                    handling of the ball and others did not.
+                </p>
+                <figure class="figure">
+                    <img class="media" src="football.jpg" alt="">
+                    <figcaption class="figcaption">football Ground</figcaption>
+                </figure>
+                <p>The variance in rules made it difficult for public schoolboys entering university to continue playing except with former schoolmates. As early as 1843 an attempt to standardize and codify the rules of play was made at the University of
+                    Cambridge, whose students joined most public schools in 1848 in adopting these “Cambridge rules,” which were further spread by Cambridge graduates who formed football clubs. In 1863 a series of meetings involving clubs from metropolitan
+                    London and surrounding counties produced the printed rules of football, which prohibited the carrying of the ball. </p>
+                <figure class="figure">
+                    <img class="media" src="football_history.jpg" alt="">
+                    <figcaption class="figcaption">Village Football</figcaption>
+                </figure>
+                <p>Football is the world’s most popular ball game in numbers of participants and spectators. Simple in its principal rules and essential equipment, the sport can be played almost anywhere, from official football playing fields (pitches) to
+                    gymnasiums, streets, school playgrounds, parks, or beaches.</p>
+                <figure class="figure">
+                    <img class="media" src="indian-football-team-blue.jpg" alt="">
+                    <figcaption class="figcaption">Indian Football Team</figcaption>
+                </figure>
+                <p>Football is one of the most popular sports in India, nearing the popularity of long time most popular sport cricket. India's current top domestic football league is Indian Super League, formed as an unrecognised professional league with
+                    eight teams (now 11) to promote Indian football to the country and world. The league began on 2014 and after third season, it was recognised as the second national football league, running parallel with the I-League, thus leaving India
+                    as one of the few countries with two fully recognised football leagues.After fifth season, it has been recognised as the top domestic football league in India. Also contested is Santosh Trophy, a knock-out competition between states
+                    (provinces) and government institutions The 2017 FIFA U-17 World Cup was hosted by India in the month of October in 2017 and for the first time the country hosted a FIFA event. The tournament was touted as the most successful FIFA
+                    U-17 World Cup ever, with the attendance being a record 1,347,133 surpassing China's 1985 edition where it was 1,230,976. India is also going to host the 2020 FIFA U-17 Women's World Cup. Owing to this, India also bid to host the 2019
+                    FIFA U-20 World Cup, but lost to Poland.</p><br>
+                <iframe class="media" src="https://www.youtube.com/embed/Rgkp9lgbPiA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Volleyball</span>
+                </div>
+                <p>Volleyball is a team sport in which two teams of six players are separated by a net. Each team tries to score points by grounding a ball on the other team's court under organized rules.It has been a part of the official program of the
+                    Summer Olympic Games since Tokyo 1964.
+                </p>
+                <figure class="figure">
+                    <img class="media" src="volleyball.jpg" alt="">
+                    <figcaption class="figcaption">Volleyball Match</figcaption>
+                </figure>
+                <p>In the winter of 1895,in Holyoke, Massachusetts (United States), William G. Morgan, a YMCA physical education director, created a new game called Mintonette, a name derived from the game of badminton, as a pastime to be played (preferably)
+                    indoors and by any number of players. The game took some of its characteristics from other sports such as tennis and handball.Another indoor sport, basketball, was catching on in the area, having been invented just ten miles (sixteen
+                    kilometres) away in the city of Springfield, Massachusetts, only four years before. Mintonette was designed to be an indoor sport, less rough than basketball, for older members of the YMCA, while still requiring a bit of athletic effort.</p>
+                <p>The first rules, written down by William G Morgan, called for a net 6 ft 6 in (1.98 m) high, a 25 ft × 50 ft (7.6 m × 15.2 m) court, and any number of players. A match was composed of nine innings with three serves for each team in each
+                    inning, and no limit to the number of ball contacts for each team before sending the ball to the opponents' court. In case of a serving error, a second try was allowed. Hitting the ball into the net was considered a foul (with loss
+                    of the point or a side-out)—except in the case of the first-try serve.</p>
+                <figure class="figure">
+                    <img class="media" src="indian_volleyball_team.jpg" alt="">
+                    <figcaption class="figcaption">Indian Volleyball Team</figcaption>
+                </figure>
+                <p>The first official ball used in volleyball is disputed; some sources say Spalding created the first official ball in 1896, while others claim it was created in 1900.The rules evolved over time: in 1916, in the Philippines, the skill and
+                    power of the set and spike had been introduced, and four years later a "three hits" rule and a rule against hitting from the back row were established. In 1917, the game was changed from requiring 21 points to win to a smaller 15 points
+                    to win. In 1919, about 16,000 volleyballs were distributed by the American Expeditionary Forces to their troops and allies, which sparked the growth of volleyball in new countries.</p>
+                <figure class="figure">
+                    <img class="media" src="new_volleyball.jpg" alt="">
+                    <figcaption class="figcaption">Village Volleyball</figcaption>
+                </figure>
+                <p>The first country outside the United States to adopt volleyball was Canada in 1900.An international federation, the Fédération Internationale de Volleyball (FIVB), was founded in 1947, and the first World Championships were held in 1949
+                    for men and 1952 for women.The sport is now popular in Brazil, in Europe (where especially Italy, the Netherlands, and countries from Eastern Europe have been major forces since the late 1980s), in Russia, and in other countries including
+                    China and the rest of Asia, as well as in the United States.</p>
+                <p>Beach volleyball, a variation of the game played on sand and with only two players per team, became a FIVB-endorsed variation in 1987 and was added to the Olympic program at the 1996 Summer Olympics.Volleyball is also a sport at the Paralympics
+                    managed by the World Organization Volleyball for Disabled.</p>
+                <figure class="figure">
+                    <img class="media" src="volly.jpg" alt="">
+                    <figcaption class="figcaption">Some old image of Volleyball</figcaption>
+                </figure>
+                <p>Nudists were early adopters of the game with regular organized play in clubs as early as the late 1920s.By the 1960s, a volleyball court had become standard in almost all nudist/naturist clubs.</p><br><br>
+                <br><iframe class="media" src="https://www.youtube.com/embed/JI0TyIOAnCA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="collumn">
+                <div class="head"><span class="headline hl3">Badminton</span>
+                </div>
+                <p>Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players
+                    per side). Badminton is often played as a casual outdoor activity in a yard or on a beach; formal games are played on a rectangular indoor court. Points are scored by striking the shuttlecock with the racquet and landing it within
+                    the opposing side's half of the court.</p>
+                <figure class="figure">
+                    <img class="media" src="badminton_court.jpg" alt="">
+                    <figcaption class="figcaption">Badminton Court</figcaption>
+                </figure>
+                <p>Each side may only strike the shuttlecock once before it passes over the net. Play ends once the shuttlecock has struck the floor or if a fault has been called by the umpire, service judge, or (in their absence) the opposing side.The shuttlecock
+                    is a feathered or (in informal matches) plastic projectile which flies differently from the balls used in many other sports. In particular, the feathers create much higher drag, causing the shuttlecock to decelerate more rapidly. Shuttlecocks
+                    also have a high top speed compared to the balls in other racquet sports. The flight of the shuttlecock gives the sport its distinctive nature.
+                </p>
+                <figure class="figure">
+                    <img class="media" src="badminton_village.jpg" alt="">
+                    <figcaption class="figcaption">Village Badminton</figcaption>
+                </figure>
+                <p>The game developed in British India from the earlier game of battledore and shuttlecock. European play came to be dominated by Denmark but the game has become very popular in Asia, with recent competitions dominated by China. Since 1992,
+                    badminton has been a Summer Olympic sport with four events: men's singles, women's singles, men's doubles, and women's doubles,with mixed doubles added four years later. At high levels of play, the sport demands excellent fitness:
+                    players require aerobic stamina, agility, strength, speed, and precision. It is also a technical sport, requiring good motor coordination and the development of sophisticated racquet movements.</p>
+                <figure class="figure">
+                    <img class="media" src="shuttle_cock.jpg" alt="">
+                    <figcaption class="figcaption">Shuttle cock</figcaption>
+                </figure>
+                <p>The game may have originally developed among expatriate officers in British India, where it was very popular by the 1870s.Ball badminton, a form of the game played with a wool ball instead of a shuttlecock, was being played in Thanjavur
+                    as early as the 1850s and was at first played interchangeably with badminton by the British, the woollen ball being preferred in windy or wet weather.</p>
+                <figure class="figure">
+                    <img class="media" src="first_badminton.jpg" alt="">
+                    <figcaption class="figcaption">First Open doubles tournament</figcaption>
+                </figure>
+                <p>The BAE started the first badminton competition, the All England Open Badminton Championships for gentlemen's doubles, ladies' doubles, and mixed doubles, in 1899.Singles competitions were added in 1900 and an England–Ireland championship
+                    match appeared in 1904.
+                </p>
+                <p>England, Scotland, Wales, Canada, Denmark, France, Ireland, the Netherlands, and New Zealand were the founding members of the International Badminton Federation in 1934, now known as the Badminton World Federation. India joined as an affiliate
+                    in 1936. The BWF now governs international badminton. Although initiated in England, competitive men's badminton has traditionally been dominated in Europe by Denmark. Worldwide, Asian nations have become dominant in international
+                    competition. China, Denmark, Indonesia, Malaysia, India, South Korea, Taiwan (as Chinese Taipei) and Japan are the nations which have consistently produced world-class players in the past few decades, with China being the greatest
+                    force in men's and women's competition recently.</p><br><br><br><br>
+                <iframe class="media" src="https://www.youtube.com/embed/XbTK50AG1zw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
