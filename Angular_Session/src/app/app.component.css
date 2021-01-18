@@ -1,0 +1,21 @@
+#tag {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#empl {
+    color: maroon;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+#nav {
+    margin-left: 300px;
+}
+
+.foot {
+    background-color: palegreen;
+    width: 100%;
+    height: 570px
+}

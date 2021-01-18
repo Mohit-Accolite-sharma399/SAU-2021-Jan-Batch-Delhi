@@ -1,0 +1,57 @@
+<div class="container" >
+  <form [formGroup]="createForm" #empForm="ngForm">
+
+      <div class="form-group">
+        <label for="empId">Employee Id</label>
+        <input class="form-control"
+        type="text"
+        placeholder="Enter Employee Id"
+        formControlName="empId"
+        name="empId"
+        >
+        <span *ngIf="!createForm.get('empId').valid && createForm.get('empId').touched" class="text-danger">
+          Please enter a Valid Employee Id
+    </span>
+      </div>
+      <div class="form-group">
+        <label for="empName">Employee Name</label>
+        <input class="form-control"
+        type="text"
+        placeholder="Enter Employee Name"
+        formControlName="empName"
+        name="empName"
+        >
+        <span *ngIf="!createForm.get('empName').valid && createForm.get('empName').touched" class="text-danger">
+          Please enter a Valid Employee Name
+    </span>
+      </div>
+      <div class="form-group">
+        <label for="empAge">Employee Age</label>
+        <input class="form-control"
+        type="number"
+        placeholder="Enter Employee Age"
+        formControlName="empAge"
+        name="empAge"
+        >
+        <span *ngIf="!createForm.get('empAge').valid && createForm.get('empAge').touched" class="text-danger">
+          Please enter a Valid Employee Age
+    </span>
+      </div>
+      <div class="form-group">
+        <label for="empDob">Employee D.O.B</label>
+        <input class="form-control"
+        type="date"
+        placeholder="Enter Employee D.O.B"
+        formControlName="empDob"
+        name="empDob"
+        min="1921-01-01" max="2000-12-31"
+        >
+        <span *ngIf="!createForm.get('empDob').valid && createForm.get('empDob').touched" class="text-danger">
+          Please enter a Valid Employee Date of Birth
+    </span>
+      </div>
+      <button *ngIf="disableUpdate" class="btn btn-success" type="submit" (click)="empForm.valid && onSubmit(empForm)">Add Employee</button>
+      <button *ngIf="!disableUpdate" class="btn btn-warning" type="submit" (click)="empForm.valid && onEdit(empForm)">Edit Employee</button>
+  </form>
+
+</div>

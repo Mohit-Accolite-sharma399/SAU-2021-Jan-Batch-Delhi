@@ -1,0 +1,25 @@
+<h1 class="text-capitalize text-center pt-5 ">Employees</h1>
+<hr class="w-25 pt-5 mx-auto" style="border-color: black">
+
+<table class="table table-bordered" style="background-color:mediumspringgreen;">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of employees">
+            <td>{{user.empId}}</td>
+            <td>{{user.empName}}</td>
+            <td>{{user.empAge}}</td>
+            <td>{{user.empDob | date:"dd-MM-yyyy"}}</td>
+            <td><button class="btn btn-primary" (click)="onEdit(user.empId)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="onDelete(user.empId)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
