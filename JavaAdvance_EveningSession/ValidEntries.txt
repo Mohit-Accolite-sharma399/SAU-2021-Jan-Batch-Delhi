@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><CSR_Producer><License Date_Status_Effective="10/01/2001" License_Class="RES PRODUCER/PRODUCER FIRM" License_Class_Code="1011" License_Expiration_Date="02/01/2022" License_Issue_Date="10/01/2001" License_Number="73146" License_Status="Y" Resident_Indicator="Y" State_Code="NV" State_ID="68723">
+   			 <LOA LOA_Issue_Date="04/22/2002" LOA_Name="Casualty" LOA_Status="Y"/>
+   			 <LOA LOA_Issue_Date="05/16/2017" LOA_Name="Health" LOA_Status="Y"/>
+   			 <LOA LOA_Issue_Date="10/01/2001" LOA_Name="Life" LOA_Status="Y"/>
+   			 <LOA LOA_Issue_Date="04/22/2002" LOA_Name="Property" LOA_Status="Y"/>
+   			 <LOA LOA_Issue_Date="04/22/2002" LOA_Name="Surety" LOA_Status="Y"/>
+   		 </License></CSR_Producer>

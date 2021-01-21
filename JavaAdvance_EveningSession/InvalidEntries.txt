@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><CSR_Producer><License Date_Status_Effective="05/01/2014" License_Class="Res Motor Club Agt/Agy" License_Class_Code="507" License_Expiration_Date="05/01/2014" License_Issue_Date="04/22/2002" License_Number="85590" License_Status="N" Resident_Indicator="Y" State_Code="NV" State_ID="68723">
+   			 <LOA LOA_Issue_Date="04/22/2002" LOA_Name="Motor Club" LOA_Status="N"/>
+   		 </License></CSR_Producer>
