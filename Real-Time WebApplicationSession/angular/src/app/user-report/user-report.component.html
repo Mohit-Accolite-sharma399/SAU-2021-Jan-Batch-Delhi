@@ -1,0 +1,42 @@
+<h1>User Report</h1>
+<table class="table">
+  <tr>
+    <th>User ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Button</th>
+  </tr>
+  <tr *ngFor="let i of user">
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td><Button type="button" (click)="show(i.email,i.name)">Click to Show</Button></td>
+  </tr>
+</table>
+<br>
+<br>
+
+<div *ngIf="showTable">
+  <h1>{{username}}</h1>
+  <table class="table">
+    <tr>
+      <th>User ID</th>
+      <th>Email</th>
+      <th>Amount</th>
+      <th>Branch Name</th>
+      <th>Currency Number</th>
+      <th>isFake</th>
+      <th>Date</th>
+    </tr>
+    <tr *ngFor="let i of specificUser">
+      <td>{{i.id}}</td>
+      <td>{{i.email}}</td>
+      <td>{{i.amount}}</td>
+      <td>{{i.branchname}}</td>
+      <td>{{i.currency_id}}</td>
+      <td>{{i.isfake}}</td>
+      <td>{{i.timestamp}}</td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,47 @@
+<div *ngIf="loggedIn">
+<h1>Login/Register</h1>
+<Button type="button" (click)="showLogin()">Login</Button>
+<Button type="button" (click)="showReg()">Register</Button>
+<br>
+<br>
+<div *ngIf="login">
+<input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+<br>
+<br>
+<input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+<br>
+<br>
+<button type="button" (click)="loginfunc()">Login In </button>
+</div>
+
+<div *ngIf="register">
+<input type="text" name="name" [(ngModel)]="name" placeholder="Name">
+<br>
+<br>
+<input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+<br>
+<br>
+<input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+<br>
+<br>
+<button type="button" (click)="regfunc()">Register</button>
+
+</div>
+</div>
+<div *ngIf="admin">
+<router-outlet></router-outlet>
+</div>
+
+
+<div *ngIf="transaction">
+<h1>Transaction</h1>
+<input type="number" name="amount" [(ngModel)]="amount" placeholder="Only rs 500 and 1000">
+<br>
+<br>
+<input type="number" name="cnid" [(ngModel)]="cnid" placeholder="currency number">
+<br>
+<br>
+<input type="text" name="bname" [(ngModel)]="bname" placeholder="Branch Name">
+
+<button type="button" (click)="submit()">Submit</button>
+</div>
